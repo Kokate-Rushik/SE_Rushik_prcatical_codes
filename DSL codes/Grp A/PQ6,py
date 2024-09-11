@@ -1,0 +1,39 @@
+#Code by Kokate Rushik
+def merge_list(lisa, lisb):
+    result=[]
+    i=0
+    j=0
+
+    while i<len(lisa) and j<len(lisb):
+        if (lisa[i]['Month']<=lisb[j]['Month']) and\
+           (lisa[i]['Day']<=lisb[j]['Day']):
+            result.append(lisa[i])
+            i+=1
+        else:
+            result.append(lisb[j])
+            j+=1
+    while i<len(lisa):
+        result.append(lisa[i])
+        i+=1
+    while j<len(lisb):
+        result.append(lisb[j])
+        j+=1
+        
+    return result
+
+List_A = [
+    {'PRN': 'SE123', 'Day': 10, 'Month': 1},
+    {'PRN': 'SE234', 'Day': 15, 'Month': 2},
+    {'PRN': 'SE345', 'Day': 5, 'Month': 6}
+]
+
+List_B = [
+    {'PRN': 'SE456', 'Day': 7, 'Month': 1},
+    {'PRN': 'SE567', 'Day': 20, 'Month': 3},
+    {'PRN': 'SE678', 'Day': 1, 'Month': 7}
+]
+
+List_SE_COMP_DOB= merge_list(List_A, List_B)
+
+for student in List_SE_COMP_DOB:
+    print(f"PRN: {student['PRN']} DAY: {student['Day']} Month: {student['Month']}")
