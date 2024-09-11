@@ -1,4 +1,4 @@
-/Code by Kokate Rushik
+//Code by Kokate Rushik
 #include <iostream>
 #include <string>
 #include <stdexcept>
