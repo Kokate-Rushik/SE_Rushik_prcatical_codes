@@ -1,3 +1,4 @@
+#Code by Kokate Rushik
 def remove_duplicates(books):
     unique_books = []
     for book in books:
