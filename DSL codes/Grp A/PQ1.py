@@ -1,5 +1,4 @@
-
-
+#Code by Kokate Rushik
 def common(L1, L2):
     return [x for x in L1 if x in L2]
 
