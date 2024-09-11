@@ -1,3 +1,4 @@
+/Code by Kokate Rushik
 #include <iostream>
 using namespace std;
 
