@@ -1,4 +1,4 @@
-/Code by Kokate Rushik
+//Code by Kokate Rushik
 #include <iostream>
 using namespace std;
 
