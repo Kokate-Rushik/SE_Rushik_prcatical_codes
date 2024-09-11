@@ -1,4 +1,4 @@
-#code by Kokate Rushik
+#Code by Kokate Rushik
 
 def custom_split(string, delimit=' '):
     result=[]
