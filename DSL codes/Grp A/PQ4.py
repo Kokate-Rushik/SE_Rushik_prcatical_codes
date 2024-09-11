@@ -1,3 +1,4 @@
+#Code by Kokate Rushik
 def checkBalance(fromthis):
     bal=0
     for i in fromthis:
