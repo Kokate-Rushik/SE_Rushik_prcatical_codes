@@ -1,3 +1,4 @@
+#Code by Kokate Rushik
 from collections import Counter
 
 def average_score(marks):
