@@ -7,7 +7,7 @@ class Pixel {
 		float size;
 	
 	public:
-		Pixel(float x0=0, float y0=0, float Size=1.0) : x1(x0), y1(0), size(Size) {}
+		Pixel(float x0=0, float y0=0, float Size=1.0) : x1(x0), y1(y0), size(Size) {}
 		virtual void draw() {
 			glPointSize(size);
 			glBegin(GL_POINTS);
@@ -50,7 +50,7 @@ void Line::drawSolid() {
 	int dx, dy, p,x ,y;
 	p=2*dy-dx;
 	x=x1;y=y1;
-	while (x1<=x2) {
+	while (x<=x2) {
 		Pixel(x,y).draw();
 		if (p<0) {
 			p += 2*dy;
@@ -67,7 +67,7 @@ void Line::drawDotted() {
 	p=2*dy-dx;
 	x=x1;y=y1;
 	count=0;
-	while (x1<=x2) {
+	while (x<=x2) {
 		if (count%2==0) {
 			Pixel(x,y).draw();
 		}
@@ -87,7 +87,7 @@ void Line::drawDashed() {
 	p=2*dy-dx;
 	x=x1;y=y1;
 	count=0;
-	while (x1<=x2) {
+	while (x<=x2) {
 		if (count%5<3) {
 			Pixel(x,y).draw();
 		}
@@ -107,7 +107,7 @@ void Line::drawDashDot() {
 	p=2*dy-dx;
 	x=x1;y=y1;
 	count=0;
-	while (x1<=x2) {
+	while (x<=x2) {
 		if (count%7<3 || count%7==5) {
 			Pixel(x,y).draw();
 		}
@@ -141,10 +141,10 @@ void Line::drawThick() {
 void display() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-	Line SolidLine(-8,8,8,8,0);
-	Line DottedLine(-8,6,8,6,1);
-	Line DashedLine(-8,4,8,4,2);
-	Line DashDotLine(-8,2,8,2,3);
+	cdLine SolidLine(-8,8,8,8,0);
+	//Line DottedLine(-8,6,8,6,1);
+	//Line DashedLine(-8,4,8,4,2);
+	//Line DashDotLine(-8,2,8,2,3);
 	Line ThickLine(-8,0,8,0,4);
 	
 	glFlush();
