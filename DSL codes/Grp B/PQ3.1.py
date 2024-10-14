@@ -1,4 +1,10 @@
 #Code by Kokate Rushik
+'''
+This enhanced Ternary Search implementation not only fulfills the original requirement of searching for a
+roll number in a club but also introduces critical membership management features. By considering 
+potential user scenarios and providing intuitive feedback, this version elevates the program to a more 
+practical and robust solution, making it well-suited for real-world applications.
+'''
 
 def TernarySearch(key, l, r):
 	'''
