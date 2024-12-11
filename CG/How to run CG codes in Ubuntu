@@ -1,0 +1,19 @@
+README
+Important Notice
+All the code provided in this project is designed to be executed on Ubuntu only. These codes
+cannot be run in TurboC++ or any other IDE. Ensure you are working within the Ubuntu
+environment for successful execution.
+Requirements
+The project relies on the graphics.h library to function. Follow the steps below to install
+graphics.h on your Ubuntu system.
+1. Open terminal in Ubuntu.
+2. Type 'sudo apt update' and it will ask for password, enter the password and hit enter 3.
+Then type 'wget https://sourceforge.net/projects/libxbgi/files/xbgi_365-1_amd64.deb'
+and then hit enter.
+4. After completing step 3, type 'sudo dpkg -i xbgi_365-1_amd64.deb' and hit enter.
+This will step your Ubuntu to run graphics.h files
+Other important Terminal commands
+1. To compile your program :- 'g++ main.cpp -o main /usr/lib64/libXbgi.a -lX11 -lm -no-pie'
+replace main.cpp with your .cpp file and main with name you want to give to .exe file.
+2. To run your program:- './main' replace main with name you had given to .exe file.
+ALL Codes By Kokate Rushik😉
