@@ -1,0 +1,5 @@
+sudo apt update
+wget http://sourceforge.net/projects/libxbgi/files/xbgi_365-1_amd64.deb
+sudo dpkg -i xbgi_365-1_amd64.deb
+g++ concave.cpp -o concave /usr/lib64/libXbgi.a -lX11 -lm -no-pie
+./concave
